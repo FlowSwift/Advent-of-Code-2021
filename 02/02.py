@@ -1,3 +1,6 @@
+"""
+https://adventofcode.com/2021/day/2
+"""
 with open("02/input.txt") as file_hnd:
     aim = 0
     distance = 0
