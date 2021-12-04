@@ -1,7 +1,6 @@
 """
 https://adventofcode.com/2021/day/4
 """
-
 def calc_answer(board,last_num):
     """
     Find the answer by doing a sum of all the unmarked numbers in the winning board and multiply by the last num
