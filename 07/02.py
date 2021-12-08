@@ -1,3 +1,6 @@
+"""
+https://adventofcode.com/2021/day/7
+"""
 test_input = [16,1,2,0,4,2,7,1,2,14]
 
 with open("07/input.txt") as file_hnd:
