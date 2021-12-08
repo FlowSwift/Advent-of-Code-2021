@@ -8,7 +8,7 @@ with open("07/input.txt") as file_hnd:
     for i in range(len(inputs)):
         for input in inputs:
             steps = abs(input - i)
-            current_total_fuel += steps + sum(range(steps))
+            current_total_fuel += steps + sum(range(steps))  #for each step, fuel gets more expensive by 1
         fuel.append(current_total_fuel)
         current_total_fuel = 0
 
