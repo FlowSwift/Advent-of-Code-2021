@@ -1,3 +1,6 @@
+"""
+https://adventofcode.com/2021/day/8
+"""
 import difflib
 
 def remove_indexes(indexes, patterns):
@@ -68,6 +71,7 @@ def attempt1():
     print(sum)
 
 
+# More efficient
 def attempt2():
     with open("08/test_input.txt") as file_hnd:
         segments = {}
