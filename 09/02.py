@@ -4,10 +4,10 @@ https://adventofcode.com/2021/day/9
 """
 #recursive approach
 def check_edges(row, column, checked):
-    checked.append(str(row) + "," + str(column))
-    check = True
+    checked.append(str(row) + "," + str(column))  # add curent position
+    check = True  # a check to see if smaller than all neighbors
     global basin_size
-    if row > upper_b:
+    if row > upper_b:  #for every neighbor, if not a boundry and not checked already, recursively check and add all neighbors to basin
         if not heights[row-1][column] > height:
             check = False
         if heights[row-1][column] < 9:
@@ -48,11 +48,10 @@ with open("09/input.txt") as file_hnd:
     basin_size = 0
     for row, line in enumerate(heights):
         for column, height in enumerate(heights[row]):
-            checked = []
+            checked = []  # list of locations added to basin_size
             basin_size = 1
             if not check_edges(row, column,checked):
                 continue
             basins.append(basin_size)
-print(basins)
 biggest = sorted(basins)[-3:]
 print(biggest[0] * biggest[1] * biggest[2])
