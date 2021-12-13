@@ -3,7 +3,7 @@ https://adventofcode.com/2021/day/12
 """
 from collections import Counter
 map = {}  # graph of all nodes
-with open("12/test_input.txt") as file_hnd:
+with open("12/input.txt") as file_hnd:
     for line in file_hnd:
         nodes = line.strip().split("-")
         if nodes[0] not in map:
@@ -15,7 +15,7 @@ with open("12/test_input.txt") as file_hnd:
 
 visited = Counter()
 completed_path = 0
-check = False
+check = False  # mark as visited twice, only allowed once.
 def check_neighbors(current_node, visited, map, check):
     global completed_path
     for exit in current_node:
