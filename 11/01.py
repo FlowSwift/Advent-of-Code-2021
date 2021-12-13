@@ -25,7 +25,7 @@ with open("11/input.txt") as file_hnd:
     fish_amount = 0
     for line in fish_grid:
         fish_amount += len(line)
-    cycles = 1000
+    cycles = 1000  #100 for part 1 solution
     for cycle in range(cycles):
         flashed = []
         for row, line in enumerate(fish_grid):
