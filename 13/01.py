@@ -23,10 +23,6 @@ for instruction in instructions:
     instruction_index = instruction.index("=")
     axis = instruction[instruction_index-1]
     fold_pos = int(instruction[instruction_index+1:])
-    if fold_pos == 6:
-        t_grid = [["." if (column,row) not in grid else "#" for column in range(max_x+1)] for row in range(max_y+1)]
-        for line in t_grid:
-            print("".join(line))
     tmp_grid = grid.copy()
     for pos in grid:
         if axis == "x":
